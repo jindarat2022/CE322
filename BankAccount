@@ -1,0 +1,38 @@
+
+
+public class BankAccount {
+    public static void main(String[] args) {
+        AcountName(name);
+        AccountID(id);
+        totalAccount++;
+        balance = amount;
+    }
+    public void transfer(BankAccount toAccount,double amount){
+        balance += amount;
+    }
+    Static void transfer(BankAccount fromAccount,BankAccount toAccount,double amount){
+        fromAccount.withdraw(amount);
+        System.out.print("Balance(overload fromAccount)Account1"+ fromAccount.balance);
+        toAccount.deposit(amount);
+        System.out.print("Balance(overload toAccount)Account1"+ toAccount.balance);
+    }
+    public void deposit(double amount){
+        balance += amount;
+    }
+    public void withdraw(double amount){
+        balance -= amount;
+    }
+    public String toString(){
+        return super.toString()+"Balance = "+balance;
+    }
+    private double balance;
+    public static void main(String[] args){
+        
+    }
+public class TestBankAccount{
+    public static void main(String[] args){
+        
+    }
+}
+    
+}
