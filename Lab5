@@ -1,0 +1,22 @@
+//การจัดการไฟล์ เกรด
+
+import java.util.Scanner;
+import java.io.*;
+public class Studentrade {
+    public static void main(String[] args) throws IOException {
+      Scanner file = new Scanner(new File("D:/score.txt")) ;
+      int i = 1;
+      while(file.hasNext()){
+          String id = file.next(), s = "";
+          double score = file.nextDouble();
+          if(score >= 60.00){
+              s = "S";
+          }else{
+              s = "U";
+          }
+          System.out.println(i++ +".\t"+id+"\t"+s);
+      }
+      
+    }
+    
+}
