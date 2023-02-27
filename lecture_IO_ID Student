@@ -1,0 +1,47 @@
+import java.util.Scanner;
+public class StudentID {
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        Scanner inputnum = new Scanner(System.in);
+        System.out.println("Enter the number of records you need to store: ");
+        int num = inputnum.nextInt();
+        for(int i=0; i<num; i++)
+        {
+        System.out.println("Enter input your Student ID : ");
+        String StudentID  = input.nextLine();
+        
+        //check the number of 10
+        if (StudentID.length() != 10){
+            System.out.println("Invalid Student ID");
+            return;
+        }
+         //chack student engineering
+        if (StudentID.charAt(3) == '0' && StudentID.charAt(4) == '9'){
+            System.out.println("Engineering Student");
+            
+        }
+        else{
+            System.out.println("Unknown Student");
+            return;
+        }
+       
+        int year = Character.getNumericValue(StudentID.charAt(1))*10 + Character.getDirectionality(StudentID.charAt(2));
+        switch(year){
+            case 65 :
+                System.out.println("Freshmen");
+                break;
+            case 64 :
+                System.out.println("Freshmen");
+                break;
+            case 63 :
+                System.out.println("Freshmen");
+                break;
+            case 62 :
+                System.out.println("Freshmen");
+                break;
+            default:
+                System.out.println("Invalid year");
+        }
+        }
+    }
+}
