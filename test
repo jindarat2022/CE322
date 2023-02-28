@@ -1,26 +1,21 @@
 import java.util.*;
-
-public class SecondClass
-{
+public class SecondClass{
     public static void main(String args[])
-    {
-        
-     for(int x=0; x<3; x++) { 
-        
+    {for(int x=0; x<3; x++){ 
         int marks[] = new int[5];
         int i;
         float total=0, avg;
         Scanner scanner = new Scanner(System.in);
+        
         System.out.print("Enter name : ");
-	String name = scanner.next();
+	String inputname = scanner.next();
         
         for(i=0; i<5; i++) { 
-        System.out.print("Enter score (20)"+(i+1)+":");
+        System.out.print("Enter score (20)"+(i+1)+" : ");
         marks[i] = scanner.nextInt();
         total = total + marks[i];
         }
-        scanner.close();
-        //Calculating average here
+
         avg = total;
         System.out.print("The student Grade is: ");
         if(avg>=85)
@@ -54,9 +49,7 @@ public class SecondClass
         else
         {
             System.out.println("F");
-        }  
-            
-        }
-       
+        }       
+    }  
     }
 }
